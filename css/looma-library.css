@@ -1,0 +1,8 @@
+button.with-play.img img {
+    max-width: 100%;
+    height: auto;
+    color: red;
+}
+button.beside-play {
+    width: 72%;
+}

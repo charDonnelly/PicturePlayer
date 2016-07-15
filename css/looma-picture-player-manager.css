@@ -1,0 +1,7 @@
+.img-thumbnail img {
+    width: 25%;
+}
+.main-container-horizontal {
+    height: 93vh;
+    overflow: scroll;
+}

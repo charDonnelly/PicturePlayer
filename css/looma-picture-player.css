@@ -1,0 +1,318 @@
+/*
+LOOMA css code file
+Filename: looma-picture-player.css
+Description: The style sheet.
+
+Programmer name: Thomas Woodside, Charlie Donnelly, and Sam Rosenberg
+Email: thomas.woodside@gmail.com, charlie.donnelly@menloschool.org, sam.rosenberg@menloschool.org.
+Owner: VillageTech Solutions (villagetechsolutions.org)
+Date: 7/1/16
+Revision: 0.3
+*/
+
+
+.img-thumbnail img { /* Styles the image thumbnails */
+    padding:1px;
+    border: 4px solid white;
+    opacity: .5;
+    height: 15vh;
+    display : inline-block;
+}
+#img-thumbs {
+    height: 15vh;
+    white-space:nowrap;
+}
+#thumb-div {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.thumbnail-controls { /*  */
+    position: relative;
+    height: 15vh;
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+.active img { /* To persist the effect when images are hovered to when they are clicked. */
+    opacity: 1;
+    border-color: #ffd100;
+}
+.main-slideshow > * { /* Styles the main slideshow to be the correct height */
+    margin-top: 5vh;
+    height: 60vh;
+    position: relative;
+}
+.captions-div-start {
+    left: 19vw;
+
+}
+.captions-div-end{
+    left: 30vw;
+}
+
+
+
+
+.captions-div {
+    display: block;
+    position: fixed;
+    height: 8vh;
+    width: 58vw;
+    top: 5vh;
+    color: #0e0e0e;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+#caption-text {
+    background-color : rgba(255, 255, 255, 0.5);
+}
+#caption-text.fullscreen {
+     top : 4vh;
+     width: 100%;
+ }
+
+
+.captions-div textarea {
+    width: 40vw;
+    height: inherit;
+    display : none;
+    background-color : rgba(255, 255, 255, 1);
+}
+.captions-div #submit {
+    display: none;
+    top: 0;
+    position: absolute;
+    right: 50vw;
+    width: 10vw;
+    font-size: 100%;
+}
+
+.transparent {
+    background-color: transparent;
+}
+.slide-controls * button{ /* The pause/play buttons */
+    height: 9vh;
+    width: 80%;
+    font-size: 1.2em;
+}
+
+.full_play {
+    position:fixed;
+    top: 76vh;
+    left: 70vw;
+    opacity: 0.5;
+}
+
+.controls img, .thumbnail-controls img { /* next/previous/forward scroll/backward scroll button icons */
+    height: auto;
+    max-width : 100%;
+}
+.img-thumbnail img:hover {  /* Effect when images are hovered */
+    opacity: 1;
+    border-color: #ffd100;
+}
+.previous{
+    transform: scale(.833, .833);
+}
+.previous img{ /* rotates the back arrow across the y  */
+    transform: rotateY(180deg);
+}
+.previous:hover { /* adjusts back arrow by flipping */
+    transform: scale(1, 1)
+}
+.next { /* initial button size */
+    transform: scale(.833, .833);
+}
+.next:hover{ /* enlarges button upon hover 20% */
+    transform: scale(1.0,1.0);
+}
+#main-img { /* styling of the large image */
+    margin: auto;
+    height: 100%;
+    width: auto;
+}
+ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+.img-thumbnail { /* erases border and padding to line up all image thumbnails */
+    border: 0;
+    padding: 0;
+}
+.ui-sortable-placeholder {
+    vertical-align: top;
+}
+#edit {
+    position: absolute;
+    right: 50vw;
+    height: 8vh;
+    width: 10vw;
+    font-size: 100%;
+}
+button.small { /* resizes the buttons to control the slideshow */
+    position: relative;
+    height: 8vh;
+    width: 80%;
+}
+button.small span.tip.native-tip, button.small span.tip.english-tip, #edit span.tip.native-tip, #edit span.tip.english-tip {
+    font-size: 1.2em;
+    top: 0;
+}
+img.small { /* resizes and aligns the icons to control the slideshow */
+    position: relative;
+    height: 6vh;
+    vertical-align: middle;
+
+}
+
+img.noDrag {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.disabled {
+    opacity: 0.3;
+}
+#screenfull {
+    height: 60vh;
+    width: 66.666666%;
+    margin-top: 5vh;
+}
+#screenfull.fullscreen {
+    height: 100vh;
+    width: auto;
+    margin-top: 0;
+}
+#fullscreen-control.fullscreen {
+    position: fixed;
+}
+
+li.ui-sortable-helper {
+    position: relative;
+}
+
+.nonExtendTrash{
+    left: 75vw;
+}
+#delete {
+    position: fixed;
+    z-index: 1;
+    top: 5vh;
+    width: 5vw;
+}
+.slide-controls * button span.tip.native-tip, .slide-controls * button span.tip.english-tip {
+    font-size: 1em;
+    top: 0;
+}
+.carrot{
+    height: 10vh;
+    width: 10vh;
+    align-content: left;
+}
+.extendTrash {
+    left: 83.5vw;
+}
+
+
+.center-captions {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+#pause{
+    display: none;
+}
+#slide{
+    top: 50%;
+    width: 25vw;
+
+}
+#slider-div {
+    top: 2.75vh;
+    position: relative;
+
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: lightgray; /* Otherwise white in Chrome */
+    top: 95%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 25px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+}
+#retract{
+transform: rotateY(180deg);
+}
+#caption-textarea{
+
+}
